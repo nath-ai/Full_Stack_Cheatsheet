@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Full Stack Cheatsheet</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <nav>
+        <h1 id="heading">Sample Project</h1>
+        <ul class="nav-links">
+          <a href="index.html"><li>Home</li></a>
+          <a href="about.html"><li>About</li></a>
+          <a href="contact.html"><li>Contact</li></a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2 id="tables">Tables</h2>
+      <div id="table-row-element" class="table-element">
+        <h3>&lt;tr&gt; Table Row Element</h3>
+        <p>The table row element, &lt;tr&gt;, is used to add rows to a table before adding table data and table headings.</p>
+        <div class="table-syntax">
+          <p>&lt;table&gt;</p>
+          <p style="text-indent: 25px;">&lt;tr&gt;</p>
+          <p style="text-indent: 25px;">...</p>
+          <p style="text-indent: 25px;">&lt;/tr&gt;</p>
+          <p>&lt;/table&gt;</p>
+        </div>
+      </div>
+      <div id="table-data-element" class="table-element">
+        <h3>&lt;td&gt; Table Data Element</h3>
+        <p>The table data element, &lt;td&gt;, can be nested inside a table row element, <tr>, to add a cell of data to a table.</p>
+        <div class="table-syntax">
+        <p>&lt;table&gt;</p>
+        <p style="text-indent: 25px;">&lt;tr&gt;</p>
+        <p style="text-indent: 50px;">&lt;td&gt; cell one data &lt;/td&gt;</p>
+        <p style="text-indent: 50px;">&lt;td&gt; cell two data &lt;/td&gt;</p>
+        <p style="text-indent: 25px;">&lt;/tr&gt;</p>
+        <p>&lt;/table&gt;</p>
+        </div>
+      </div>
+        <div id="table-head-element" class="table-element">
+          <h3>&lt;thead&gt; Table Head Element</h3>
+          <p>The table head element, &lt;thead&gt;, defines the headings of table columns encapsulated in table rows.</p>
+          <div class="table-syntax">
+            <p>&lt;table&gt;</p>
+            <p style="text-indent: 25px;">&lt;thead&gt;</p>
+            <p style="text-indent: 50px;">&lt;tr&gt;</p>
+            <p style="text-indent: 75px;">&lt;th&gt; heading 1 &lt;/th&gt;</p>
+            <p style="text-indent: 75px;">&lt;th&gt; heading 2 &lt;/th&gt;</p>
+            <p style="text-indent: 50px;">&lt;/tr&gt;</p>
+            <p style="text-indent: 25px;">&lt;/thead&gt;</p>
+            <p style="text-indent: 25px;">&lt;tbody&gt;</p>
+            <p style="text-indent: 50px;">&lt;tr&gt;</p>
+            <p style="text-indent: 75px;">&lt;td&gt; col one &lt;/td&gt;</p>
+            <p style="text-indent: 75px;">&lt;td&gt; col two &lt;/td&gt;</p>
+            <p style="text-indent: 50px;">&lt;/tr&gt;</p>
+            <p style="text-indent: 25px;">&lt;/tbody&gt;</p>
+            <p>&lt;/table&gt;</p>
+          </div>
+        </div>
+        <div id="rowspan-attribute" class="table-element">
+          <h3><em>rowspan</em> Attribute</h3>
+          <p>Similar to <em><strong>colspan</strong></em>, the <em><strong>rowspan</strong></em> attribute on a table header or table data element indicates how many rows that particular cell should span within the table. The <em><strong>rowspan</strong></em> value is set to 1 by default and will take any positive integer up to 65534.</p>
+          <div class="table-syntax">
+            <p>&lt;table&gt;</p>
+            <p style="text-indent: 25px;">&lt;tr&gt;</p>
+            <p style="text-indent: 50px;">&lt;th&gt;row 1:&lt;/th&gt;</p>
+            <p style="text-indent: 75px;">&lt;td&gt; col one &lt;/td&gt;</p>
+            <p style="text-indent: 75px;">&lt;td&gt; col two &lt;/td&gt;</p>
+            <p style="text-indent: 25px;">&lt;/tr&gt;</p>
+            <p style="text-indent: 25px;">&lt;tr&gt;</p>
+            <p style="text-indent: 50px;">&lt;th rowspan="2"&gt;row 2 (this row will span 2 rows):&lt;/th&gt;</p>
+            <p style="text-indent: 50px;">&lt;td&gt; col one &lt;/td&gt;</p>
+            <p style="text-indent: 50px;">&lt;td&gt; col two &lt;/td&gt;</p>
+            <p style="text-indent: 25px;">&lt;/tr&gt;</p>
+            <p style="text-indent: 25px;">&lt;tr&gt;</p>
+            <p style="text-indent: 50px;">&lt;td&gt; col one &lt;/td&gt;</p>
+            <p style="text-indent: 50px;">&lt;td&gt; col two &lt;/td&gt;</p>
+            <p style="text-indent: 25px;">&lt;/tr&gt;</p>
+            <p style="text-indent: 25px;">&lt;tr&gt;</p>
+            <p style="text-indent: 50px;">&lt;th&gt; row three &lt;/th&gt;</p>
+            <p style="text-indent: 50px;">&lt;td&gt; col one &lt;/td&gt;</p>
+            <p style="text-indent: 50px;">&lt;td&gt; col two &lt;/td&gt;</p>
+            <p style="text-indent: 25px;">&lt;/tr&gt;</p>
+            <p>&lt;/table&gt;</p>
+          </div>
+        </div>
+        <div id="table-body-element" class="table-element">
+          <h3>&lt;tbody&gt; Table Body Element</h3>
+          <p>The table body element, &lt;tbody&gt;, is a semantic element that will contain all table data other than table heading and table footer content. If used, &lt;tbody&gt; will contain all table row &lt;tr&gt; elements, and indicates that &lt;tr&gt; elements make up the body of the table. &lt;table&gt; cannot have both &lt;tbody&gt; and &lt;tr&gt; as direct children.</p>
+          <div class="table-syntax">
+            <p>&lt;table&gt;</p>
+            <p style="text-indent: 25px;">&lt;tbody&gt;</p>
+            <p style="text-indent: 50px;">&lt;tr&gt;</p>
+            <p style="text-indent: 75px;">&lt;td&gt; row one &lt;/td&gt;</p>
+            <p style="text-indent: 50px;">&lt;/tr&gt;</p>
+            <p style="text-indent: 50px;">&lt;tr&gt;</p>
+            <p style="text-indent: 75px;">&lt;td&gt; row two &lt;/td&gt;</p>
+            <p style="text-indent: 50px;">&lt;/tr&gt;</p>
+            <p style="text-indent: 50px;">&lt;tr&gt;</p>
+            <p style="text-indent: 75px;">&lt;td&gt; row three &lt;/td&gt;</p>
+            <p style="text-indent: 50px;">&lt;/tr&gt;</p>
+            <p style="text-indent: 25px;">&lt;/tbody&gt;</p>
+            <p>&lt;/table&gt;</p>
+          </div>
+        </div>
+        <div id="table-heading-element" class="table-element">
+          <h3>&lt;th&gt; Table Heading Element</h3>
+          <p>The table heading element, &lt;th&gt;, is used to add titles to rows and columns of a table and must be enclosed in a table row element, &lt;tr&gt;.</p>
+          <div class="table-syntax">
+            <p>&lt;table&gt;</p>
+            <p style="text-indent: 25px;">&lt;tr&gt;</p>
+            <p style="text-indent: 50px;">&lt;th&gt; col one &lt;/th&gt;</p>
+            <p style="text-indent: 50px;">&lt;th&gt; col two &lt;/th&gt;</p>
+            <p style="text-indent: 25px;">&lt;/tr&gt;</p>
+            <p style="text-indent: 25px;">&lt;tr&gt;</p>
+            <p style="text-indent: 50px;">&lt;td&gt; one &lt;/td&gt;</p>
+            <p style="text-indent: 50px;">&lt;td&gt; two &lt;/td&gt;</p>
+            <p style="text-indent: 25px;">&lt;/tr&gt;</p>
+            <p>&lt;/table&gt;</p>
+          </div>
+        </div>
+        <div id="colspan-attribute" class="table-element">
+          <h3>&lt;colspan&gt Attribute;</h3>
+          <p>The <em><strong>colspan</strong></em>attribute on a table header &lt;th&gt; or table data &lt;td&gt; element indicates how many columns that particular cell should span within the table. The <em><strong>colspan</strong></em> value is set to 1 by default and will take any positive integer between 1 and 1000.</p>
+          <div class="table-syntax">
+            <p>&lt;table&gt;</p>
+            <p style="text-indent: 25px;">&lt;tr&gt;</p>
+            <p style="text-indent: 50px;">&lt;th&gt; row one &lt;/th&gt;</p>
+            <p style="text-indent: 50px;">&lt;td&gt; col one &lt;/td&gt;</p>
+            <p style="text-indent: 50px;">&lt;td&gt; col two &lt;/td&gt;</p>
+            <p style="text-indent: 50px;">&lt;td&gt; col three &lt;/td&gt;</p>
+            <p style="text-indent: 25px;">&lt;/tr&gt;</p>
+            <p style="text-indent: 25px;">&lt;tr&gt;</p>
+            <p style="text-indent: 50px;">&lt;th&gt; row two &lt;/th&gt;</p>
+            <p style="text-indent: 50px;">&lt;td colspan="2"&gt; col one (will span 2 cols) &lt;/td&gt;</p>
+            <p style="text-indent: 50px;">&lt;td&gt; col two &lt;/td&gt;</p>
+            <p style="text-indent: 50px;">&lt;td&gt; col three &lt;/td&gt;</p>
+            <p style="text-indent: 25px;">&lt;/tr&gt;</p>
+            <p>&lt;/table&gt;</p>
+          </div>
+        </div>
+        <div id="table-footer-element" class="table-element">
+          <h3>&lt;tfoot&gt; Table Footer Element</h3>
+          <p>The table footer element, &lt;tfoot&gt;, uses table rows to give footer content or to summarize content at the end of a table.</p>
+          <div class="table-syntax">
+          <p>&lt;table&gt;</p>
+          <p style="text-indent: 25px;">&lt;thead&gt;</p>
+          <p style="text-indent: 50px;">&lt;tr&gt;</p>
+          <p style="text-indent: 75px;">&lt;th&gt;heading one&lt;/th&gt;</p>
+          <p style="text-indent: 75px;">&lt;th&gt;heading two&lt;/th&gt;</p>
+          <p style="text-indent: 50px;">&lt;/tr&gt;</p>
+          <p style="text-indent: 25px;">&lt;/thead&gt;</p>
+          <p style="text-indent: 25px;">&lt;tbody&gt;</p>
+          <p style="text-indent: 50px;">&lt;tr&gt;</p>
+          <p style="text-indent: 75px;">&lt;td&gt;col one&lt;/td&gt;</p>
+          <p style="text-indent: 75px;">&lt;td&gt;col two&lt;/td&gt;</p>
+          <p style="text-indent: 50px;">&lt;/tr&gt;</p>
+          <p style="text-indent: 25px;">&lt;/tbody&gt;</p>
+          <p style="text-indent: 25px;">&lt;tfoot&gt;</p>
+          <p style="text-indent: 50px;">&lt;tr&gt;</p>
+          <p style="text-indent: 75px;">&lt;td&gt;summary of col one&lt;/td&gt;</p>
+          <p style="text-indent: 75px;">&lt;td&gt;summary of col two&lt;/td&gt;</p>
+          <p style="text-indent: 50px;">&lt;/tr&gt;</p>
+          <p style="text-indent: 25px;">&lt;/tfoot&gt;</p>
+          <p>&lt;/table&gt;</p>
+          </div>
+        </div>
+        <div id="table-element" class="table-element">
+          <h3>&lt;table&gt; Table Element</h3>
+          <p>In HTML, the &lt;table&gt; element has content that is used to represent a two-dimensional table made of rows and columns.</p>
+          <div class="table-syntax">
+            <p>&lt;table&gt;</p>
+            <p style="text-indent: 25px;">&lt;!-- rows and columns will go here --&gt;</p>
+            <p>&lt;/table&gt;</p>
+          </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
